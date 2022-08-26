@@ -10,17 +10,24 @@
   <div class="container">
     <form id="form" class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
       <h1 class="form__title">Customized inputs</h1>
-      <label class="form__label">
-        <input type="checkbox" class="form__check">
-      </label>
-      <input type="radio" class="form__radio">
-      <input type="radio" class="form__radio">
+      <div class="checkbox flex">
+        <input type="checkbox" id="checkbox" class="checkbox__input">
+        <label for="checkbox" class="checkbox__label">Check</label>
+      </div>
+      <div class="radio flex">
+        <input type="radio" name="radio" class="radio__button">
+        <input type="radio" name="radio" class="radio__button">
+        <input type="radio" name="radio" class="radio__button">
+        <input type="radio" name="radio" class="radio__button">
+        <input type="radio" name="radio" class="radio__button">
+      </div>
       <select class="form__select">
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
         <option value="3">Option 3</option>
         <option value="4">Option 4</option>
       </select>
+      <button class="form__button" type="submit">Send</button>
     </form>
   </div>
 </body>

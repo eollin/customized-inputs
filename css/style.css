@@ -52,8 +52,31 @@ body {
 }
 
 .form__title,
-.form__label,
-.form__radio {
-  margin-bottom: 30px;
+.checkbox,
+.radio{
+  margin-bottom: 40px;
 }
 
+.form__select {
+  margin-bottom: 60px;
+}
+
+/* checkbox */
+/* .checkbox__input {
+  opacity: 0;
+  width: 0;
+  height: 0
+} */
+
+.checkbox__label {
+  padding-left: 10px;
+}
+
+/* radio */
+.radio__button:not(:last-child) {
+  margin-right: 30px;
+}
+
+.form__button {
+  margin: 0 auto;
+}
