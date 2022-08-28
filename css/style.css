@@ -19,10 +19,10 @@ body {
 }
 
 :root {
-  --color-promo: ;
-  --color-hover: ;
-  --color-active: ;
-  --color-text: ;
+  --color-light: #ffffff;
+  --color-promo: #d2a4ce;
+  --color-hover: #b89bd4;
+  --color-text: #262626;
 }
 
 /* glob */
@@ -38,11 +38,19 @@ body {
   display: flex;
 }
 
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* form */
 .form {
   align-items: flex-start;
   flex-direction: column;
   padding: 60px 60px;
-  background-color: #fff;
+  background-color: var(--color-light);
   border-radius: 20px;
 }
 
@@ -62,14 +70,74 @@ body {
 }
 
 /* checkbox */
-/* .checkbox__input {
+.checkbox {
+  align-items: center;
+}
+
+.checkbox__input {
   opacity: 0;
   width: 0;
-  height: 0
-} */
+  height: 0;
+}
 
 .checkbox__label {
-  padding-left: 10px;
+  position: relative;
+  padding-left: 30px;
+  color: var(--color-text);
+}
+
+.checkbox__label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--color-text);
+}
+
+.checkbox__label::after {
+  content: "";
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 16%;
+  left: 2%;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.47742L3.10291 5.58033L7.58033 1.10291' stroke='%23d2a4ce'/%3E%3C/svg%3E%0A");
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  opacity: 1;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  border: 1px solid var(--color-promo)
+}
+
+.checkbox__input + .checkbox__label::after {
+  transition-property: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.checkbox__input + .checkbox__label::before {
+  transition-property: border;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.checkbox__input:focus-visible + .checkbox__label::before {
+  outline: 2px solid var(--color-promo);
+  outline-offset: 2px;
+}
+
+.checkbox__input:hover + .checkbox__label::before {
+  border: 1px solid var(--color-promo)
 }
 
 /* radio */
@@ -77,6 +145,28 @@ body {
   margin-right: 30px;
 }
 
-.form__button {
+.form__btn {
   margin: 0 auto;
+  padding: 14px 30px;
+  border-radius: 12px;
+  color: var(--color-light);
+  font-size: 20px;
+  background-color: var(--color-promo);
+  transition: background-color .3s ease;
+}
+
+.form__btn:focus-visible {
+  outline: 2px solid var(--color-promo);
+  outline-offset: 2px;
+  background-color: var(--color-promo);
+}
+
+.form__btn:hover {
+  background-color: var(--color-hover);
+}
+
+.form__btn:active {
+  outline: 2px solid var(--color-hover);
+  outline-offset: 2px;
+  background-color: var(--color-hover);
 }
