@@ -10,14 +10,16 @@
   <div class="container">
     <form id="form" class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
       <h1 class="form__title">Customized inputs</h1>
+      <h2 class="form__title-small">Choose your gender</h2>
       <div class="checkbox checkbox_cat flex">
         <input type="checkbox" id="checkbox" class="checkbox__input" name="cat">
-        <label for="checkbox" class="checkbox__label">Tick if you're a cat</label>
+        <label for="checkbox" class="checkbox__label">A cat</label>
       </div>
       <div class="checkbox checkbox_human flex">
         <input type="checkbox" id="checkbox-2" class="checkbox__input" name="human">
-        <label for="checkbox-2" class="checkbox__label">Tick if you're a human</label>
+        <label for="checkbox-2" class="checkbox__label">A human</label>
       </div>
+      <h2 class="form__title-small">Choose your wings color</h2>
       <div class="radio flex">
         <label class="radio__label">
           <input type="radio" class="radio__input" name="color" value="#ee99be" checked>
@@ -40,12 +42,13 @@
           <span class="radio__mark radio__mark_5"></span>
         </label>
       </div>
+      <h2 class="form__title-small">Choose your superpower</h2>
       <div class="form__select">
-        <select class="select">
-          <option name="Rainbow">Rainbow</option>
-          <option name="Unicorn">Unicorn</option>
-          <option name="Bubble tea">Bubble tea</option>
-          <option name="Naruto">Naruto</option>
+        <select class="select" name="superpower">
+          <option value="Moon prism">Moon prism</option>
+          <option value="Rainbow">Rainbow</option>
+          <option value="Unicorn">Unicorn</option>
+          <option value="Bubble tea">Bubble tea</option>
         </select>
       </div>
       <button class="form__btn btn-reset" type="submit">SEND</button>
