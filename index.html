@@ -10,9 +10,13 @@
   <div class="container">
     <form id="form" class="form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
       <h1 class="form__title">Customized inputs</h1>
-      <div class="checkbox flex">
-        <input type="checkbox" id="checkbox" class="checkbox__input">
+      <div class="checkbox checkbox_cat flex">
+        <input type="checkbox" id="checkbox" class="checkbox__input" name="cat">
         <label for="checkbox" class="checkbox__label">Tick if you're a cat</label>
+      </div>
+      <div class="checkbox checkbox_human flex">
+        <input type="checkbox" id="checkbox-2" class="checkbox__input" name="human">
+        <label for="checkbox-2" class="checkbox__label">Tick if you're a human</label>
       </div>
       <div class="radio flex">
         <label class="radio__label">
@@ -38,10 +42,10 @@
       </div>
       <div class="form__select">
         <select class="select">
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-          <option value="4">Option 4</option>
+          <option name="Rainbow">Rainbow</option>
+          <option name="Unicorn">Unicorn</option>
+          <option name="Bubble tea">Bubble tea</option>
+          <option name="Naruto">Naruto</option>
         </select>
       </div>
       <button class="form__btn btn-reset" type="submit">SEND</button>
