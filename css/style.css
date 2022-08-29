@@ -67,7 +67,7 @@ body {
 }
 
 .form__title,
-.checkbox_human,
+.form__checkbox,
 .radio,
 .form__select{
   margin-bottom: 36px;
@@ -78,8 +78,13 @@ body {
   align-items: center;
 }
 
-.checkbox_cat {
-  margin-bottom: 20px;
+.form__checkbox {
+  align-items: start;
+}
+
+.checkbox_cat,
+.checkbox_human {
+  margin-right: 40px;
 }
 
 .checkbox__input {
